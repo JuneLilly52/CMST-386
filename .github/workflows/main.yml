@@ -1,4 +1,4 @@
-name: Deploy HTML Files to AppService - CMST386
+name: Deploy HTML Files to AppServiceCMST386
 on:
   push:
     branches:
@@ -7,9 +7,9 @@ jobs:
   build-and-deploy:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@master
     - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
+      uses: azure/webapps-deploy@v1
       with:
         app-name: 'cmst386-rgoldfarb1'
         slot-name: 'production'
